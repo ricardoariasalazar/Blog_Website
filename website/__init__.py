@@ -18,8 +18,8 @@ login_manager.login_message_category = 'info'
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_USERNAME'] = 'ricardoariasalazar@gmail.com'#os.environ.get('EMAIL_USER')
-app.config['MAIL_PASSWORD'] = 'cctEJD18' #os.environ.get('EMAIL_PASSWORD')
+app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
+app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASSWORD')
 mail = Mail(app)
 
 from website import routes
